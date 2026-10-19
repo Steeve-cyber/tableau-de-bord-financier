@@ -1,0 +1,214 @@
+/* ── Formulaire ─────────────────────────────────────────── */
+.tf-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 14px;
+  margin: 24px 0 18px;
+  padding: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.35);
+  color-scheme: dark;
+}
+
+.tf-titre {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.tf-large {
+  grid-column: 1 / -1;
+}
+
+.tf-champ {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.85rem;
+  min-width: 0;
+}
+
+.tf-champ span {
+  color: #94a3b8;
+}
+
+.tf-champ input,
+.tf-champ select {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  padding: 10px 12px;
+  font: inherit;
+  font-size: 0.95rem;
+  color: #e2e8f0;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  border-radius: 8px;
+}
+
+.tf-champ select option,
+.tf-champ select optgroup {
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+.tf-champ input:focus-visible,
+.tf-champ select:focus-visible {
+  outline: 2px solid rgba(56, 189, 248, 0.45);
+  border-color: #38bdf8;
+}
+
+.tf-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 10px;
+}
+
+.tf-bouton {
+  padding: 10px 20px;
+  font: inherit;
+  font-size: 0.95rem;
+  color: #e2e8f0;
+  background: transparent;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.tf-bouton:hover {
+  border-color: #38bdf8;
+}
+
+.tf-principal {
+  background: #38bdf8;
+  border-color: #38bdf8;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.tf-erreur {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: #f87171;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 520px) {
+  .tf-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Filtres ────────────────────────────────────────────── */
+.fb-barre {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 14px;
+}
+
+.fb-bouton {
+  padding: 6px 16px;
+  font: inherit;
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  background: transparent;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.fb-bouton:hover {
+  border-color: #38bdf8;
+}
+
+.fb-actif {
+  background: #38bdf8;
+  border-color: #38bdf8;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+/* ── Liste des transactions ─────────────────────────────── */
+.tl-liste {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tl-ligne {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 10px;
+  background: rgba(15, 23, 42, 0.35);
+}
+
+.tl-en-edition {
+  border-color: #38bdf8;
+  background: rgba(56, 189, 248, 0.08);
+}
+
+.tl-texte {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.tl-titre {
+  overflow-wrap: anywhere;
+}
+
+.tl-meta {
+  font-size: 0.8rem;
+  opacity: 0.65;
+}
+
+.tl-droite {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.tl-montant {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.tl-revenu {
+  color: #4ade80;
+}
+
+.tl-depense {
+  color: #f87171;
+}
+
+.tl-icone {
+  padding: 4px 6px;
+  font-size: 1rem;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.tl-icone:hover {
+  opacity: 1;
+  background: rgba(148, 163, 184, 0.15);
+}
+
+.tl-vide {
+  padding: 20px 0;
+  text-align: center;
+  opacity: 0.6;
+}
